@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PDA2</string>
+    <string name="settings">设置</string>
+
+    <string name="error_get_data_failure">获取数据失败</string>
+    <string name="error_incorrect_network_result">错误的结果</string>
+    <string name="error_get_warehouses_failed">获取仓库失败</string>
+    <string name="open_drawer_menu">打开抽屉菜单</string>
+    <string name="close_drawer_menu">关闭抽屉菜单</string>
+    <string name="hint_stockout_num">调出库存</string>
+</resources>

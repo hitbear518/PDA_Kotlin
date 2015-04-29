@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.zsxj.pda2.ui.activity.LoginActivity">
+
+    <include layout="@layout/tool_bar" />
+
+    <ScrollView
+        android:id="@+id/login_form_view"
+        style="@style/Root.NoList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/sid_edit"
+                style="@style/AccountField"
+                android:hint="@string/prompt_sid" />
+
+            <EditText
+                android:id="@+id/username_edit"
+                style="@style/AccountField"
+                android:hint="@string/prompt_username" />
+
+            <EditText
+                android:id="@+id/password_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/sign_in_button"
+                style="@style/RaisedButton.Horizontal"
+                android:text="@string/action_sign_in" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Login progress -->
+    <include
+        android:id="@+id/progress_view"
+        layout="@layout/fullscreen_progress" />
+
+</LinearLayout>
+
+
+
