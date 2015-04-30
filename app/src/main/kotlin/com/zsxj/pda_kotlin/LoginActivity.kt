@@ -1,18 +1,36 @@
 package com.zsxj.pda_kotlin
 
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.support.v7.app.ActionBarActivity
+import android.support.v7.app.AppCompatActivity
+import android.view.KeyEvent
+import android.view.inputmethod.EditorInfo
+import android.widget.EditText
+import android.widget.TextView
+import kotlinx.android.synthetic.activity_login.password_edit
+import kotlinx.android.synthetic.activity_login.sid_edit
+import kotlinx.android.synthetic.activity_login.username_edit
+import kotlinx.android.synthetic.tool_bar.toolbar
+import org.jetbrains.anko.*
 
-import kotlinx.android.synthetic.activity_login.*
-import kotlinx.android.synthetic.tool_bar.*
+public class LoginActivity : AppCompatActivity() {
 
-public class LoginActivity : ActionBarActivity() {
+    val sidEdit = find<EditText>(R.id.sid_edit)
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        super<AppCompatActivity>.onCreate(savedInstanceState)
+        gridLayout {
 
-        setSupportActionBar(toolbar)
+        }
+    }
+
+    private fun restoreFromPrefs() {
+
+    }
+
+    private fun editorActionNext(v: TextView, actionId: Int, event: KeyEvent): Boolean {
+        if (actionId == EditorInfo.IME_NULL && event.getAction() == KeyEvent.ACTION_UP) {
+            v.onEditorAction(EditorInfo.IME_ACTION_NEXT)
+        }
+        return true
     }
 }
